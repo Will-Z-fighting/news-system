@@ -4,6 +4,8 @@ import Router from 'vue-router'
 
 import Login from "@/views/Login"
 import Index from "@/views/Index"
+import PostList from "@/views/PostList";
+import PostAdd from "@/views/PostAdd";
 
 // 注册路由插件
 Vue.use(Router)
@@ -25,8 +27,11 @@ export default new Router({
 
     // 后台首页
     { path: "/", component: Index, children: [
+
+      { path: "post_list", component: PostList},
+      { path: "post_add", component: PostAdd}
       
-    ] }
+    ]}
 
   ]
 
