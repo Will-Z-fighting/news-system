@@ -1,5 +1,7 @@
 <template>
-    <div>主入口</div>
+    <div>
+        <router-view></router-view>
+    </div>
 </template>
 
 <script>
@@ -8,6 +10,24 @@ export default {
 }
 </script>
 
-<style>
+<style scoped lang="less">
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    ul,ol,li {
+        list-style: none;
+    }
+
+    em,i {
+        font-style: normal;
+    }
 
 </style>

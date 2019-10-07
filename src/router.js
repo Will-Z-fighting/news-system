@@ -1,3 +1,8 @@
+// 导入组件
+import Vue from 'vue'
+import Router from 'vue-router'
+
+import Login from "@/views/Login"
 
 // 注册路由插件
 Vue.use(Router)
@@ -13,6 +18,7 @@ export default new Router({
 
   // 路由的配置
   routes: [
-
+    { path: "/login", component: Login }
   ]
+
 })
