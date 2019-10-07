@@ -110,6 +110,7 @@ export default {
     border: 1px gray solid;
     border-radius: 10px;
     width: 400px;
+    background: #eee;
 }
 
 </style>
