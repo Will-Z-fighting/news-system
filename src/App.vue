@@ -10,7 +10,7 @@ export default {
 }
 </script>
 
-<style scoped lang="less">
+<style>
 
     * {
         margin: 0;

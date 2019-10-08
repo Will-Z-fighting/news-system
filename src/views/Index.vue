@@ -2,6 +2,7 @@
     <el-container class="container">
         <!-- 侧边栏 -->
         <el-aside width="200px">
+
             <div class="logo">
                 黑马头条
             </div>
@@ -28,7 +29,7 @@
                         <router-link to="/post_add">发布文章</router-link>
                     </el-menu-item>
                 </el-submenu>
-            </el-menu>            
+            </el-menu>
         </el-aside>
         <!-- 右侧的内容部分 -->
         <el-container>
@@ -39,7 +40,10 @@
                 <span>退出</span>
             </el-header>
             <!-- 子页面显示的内容 -->
-            <el-main>               
+            <el-main>
+
+                <div>{{breaks}}</div>
+
                 <!-- 显示子路由匹配的页面 -->
                 <router-view></router-view>
             </el-main>    
@@ -53,6 +57,20 @@ export default {
     data(){
         return {
             user: JSON.parse(localStorage.getItem("user") || `{}` )
+        }
+    },
+
+    // computed里面的函数监听到函数中引用的所有实例下的属性的变化
+    computed: {
+        breaks(){
+            const {matched} = this.$route;
+            const arr = [];
+
+            matched.forEach(v => {
+                arr.push(v.meta)
+            })
+
+            return arr.join(" / ");
         }
     },
 
