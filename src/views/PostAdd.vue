@@ -19,7 +19,7 @@
 
             <el-form-item label="视频" v-if="form.type === 2">
                 <el-upload
-                    :action="`$($axios.defaults.baseURL)/upload`"
+                    :action="`${$axios.defaults.baseURL}/upload`"
                     name="file"
                     :headers="{
                         Authorization: token
@@ -184,6 +184,7 @@ export default {
 
         // 上传视频
         handleVideoSuccess(res){
+            
             // 把视频链接保存到content
             this.form.content = this.$axios.defaults.baseURL + res.data.url;
 
